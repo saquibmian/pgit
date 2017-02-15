@@ -27,11 +27,11 @@ func (l *LogWriter) Write(p []byte) (n int, err error) {
 		return
 	}
 
-	err = l.outputLines()
+	err = l.Flush()
 	return
 }
 
-func (l *LogWriter) outputLines() (err error) {
+func (l *LogWriter) Flush() (err error) {
 	for {
 		line, err := l.buf.ReadString('\n')
 		if err == io.EOF {
