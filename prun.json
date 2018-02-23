@@ -1,6 +1,0 @@
-[
-    { "command": "echo", "args": ["this", "is", "a", "test"] },
-    { "command": "echo", "args": ["second", "is", "test"] },
-    { "command": "ls", "args": ["a", "third", "test"] },
-    { "command": "woahhh", "args": ["a", "third", "test"] }
-]

@@ -9,15 +9,15 @@ import (
 // LogWriter is an io.Writer that wraps a log.Logger
 type LogWriter struct {
 	Logger    *log.Logger
-    buf       *bytes.Buffer
+	buf       *bytes.Buffer
 	readLines string
 }
 
 // NewLogWriter creates a new LogWriter that wraps a log.Logger
 func NewLogWriter(logger *log.Logger) *LogWriter {
 	writer := &LogWriter{
-		Logger:     logger,
-        buf:        bytes.NewBuffer([]byte("")),
+		Logger: logger,
+		buf:    bytes.NewBuffer(make([]byte, 0)),
 	}
 	return writer
 }
